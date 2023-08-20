@@ -28,3 +28,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Watch API Docs
+
+After running the app you can visit [API Doc](http://localhost:3333/swagger)
