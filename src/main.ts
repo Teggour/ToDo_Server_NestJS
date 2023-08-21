@@ -13,6 +13,11 @@ async function bootstrap() {
   // Set prefix to API
   app.setGlobalPrefix('api');
 
+  // Adding CORS for any origins
+  app.enableCors({
+    origin: '*',
+  });
+
   // Swagger
   const swaggerConfig = new DocumentBuilder()
     .setTitle('ToDo App')
