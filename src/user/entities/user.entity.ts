@@ -66,9 +66,11 @@ export class User {
   @BeforeInsert()
   @BeforeUpdate()
   private async hashPassword() {
-    const hashedPassword = await argon2.hash(this.password);
+    if (this.password) {
+      const hashedPassword = await argon2.hash(this.password);
 
-    this.password = hashedPassword;
+      this.password = hashedPassword;
+    }
   }
 
   @ApiProperty({
